@@ -1,0 +1,26 @@
+<h1>{{viewTitle}}</h1>
+{{#each list}}
+<form action="/employee-update" method="POST">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Enter the Name" value="{{this.name}}"/>
+    </div>
+        <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" placeholder="Enter the E-mail Address" value="{{this.email}}" readonly/>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Mobile</label>
+            <input type="text" class="form-control" name="mobile" placeholder="Enter the Mobile Number" value="{{this.phone}}"/>
+        </div>
+        <div class="form-group col-md-6">
+            <label>City</label>
+            <input type="text" class="form-control" name="city" placeholder="Enter the City" value="{{this.city}}"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary btn-block btn-lg"  name="submit"/>
+    </div>
+</form>
+{{/each}}
